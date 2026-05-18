@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <exception>
+#include  <stdexcept>
 using std::cout;
 using std::endl;
 
@@ -36,7 +37,7 @@ namespace myStack {
             return head == nullptr || current == nullptr;
         }
         U top()const {
-            if (isEmpty()) throw std::exception("List is empty!");
+            if (isEmpty()) throw std::runtime_error("List is empty!");
 
             return current->info;
         }
